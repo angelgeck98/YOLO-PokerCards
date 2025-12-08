@@ -11,9 +11,5 @@ threshold (e.g., 0.5) to filter out low-confidence detections. You should experi
 affects your hand classification accuracy.
 
 ACTUAL TO-DO:
-- train model with 100 epochs
-- check if detection works with video input
 - create logic for poker hands identification
-- figure out how cards are represented once they're detected 
-  - change this so that it's [rank, suit] tuple
 - include anything in evaluation and helpers files??
