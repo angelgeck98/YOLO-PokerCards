@@ -2,9 +2,6 @@ Not really a to-do file but it's holding my thoughts and other things.
 
 Prof comments on our project:
 [Recommendations]
-1.  YOLO Fine-Tuning: The Ultralytics library is well-documented. Pay close attention to their tutorials 
-on how to format your dataset correctly for training. Getting the dataset configuration (`.yaml` file) right 
-is the most common stumbling block.
 2.  Poker Hand Logic: The logic for classifying a poker hand is a fun problem. I recommend you represent the 
 cards in a structured way as soon as they are detected. For example, a list of tuples like `[('K', 'Spades'), 
 ('K', 'Hearts'), ('7', 'Clubs'), ...]`. This will make it much easier to write functions to check for pairs, straights, 
@@ -14,6 +11,9 @@ threshold (e.g., 0.5) to filter out low-confidence detections. You should experi
 affects your hand classification accuracy.
 
 ACTUAL TO-DO:
-- make virutal environment and install dependencies
-  - are those all the dependencies we need? do we need more? less?
-- ermmmm do literally everything else 
+- train model with 100 epochs
+- check if detection works with video input
+- create logic for poker hands identification
+- figure out how cards are represented once they're detected 
+  - change this so that it's [rank, suit] tuple
+- include anything in evaluation and helpers files??
