@@ -1,22 +1,18 @@
 '''
-Model training using YOLO
-Copied directly from ultralytics repo so not fully accurate
-to our project
+Train model for object detection using pretrained YOLO Detection Model
 
-Link: https://docs.ultralytics.com/modes/train/#introduction
 '''
 
 from ultralytics import YOLO
-from dataset import PlayingCardDataset
 
 # Load a pretrained YOLO11n model
 model = YOLO("yolo11n.pt")
 
-# Train the model on the COCO8 dataset for 100 epochs
+# Train the model on the card dataset for 100 epochs
 train_results = model.train(
-    data="coco8.yaml",  # Path to dataset configuration file
-    epochs=100,  # Number of training epochs
-    imgsz=640,  # Image size for training
+    data="card.yaml",  # Path to dataset configuration file
+    epochs=5,  # Number of training epochs
+    imgsz=224,  # Image size for training
     device="cpu",  # Device to run on (e.g., 'cpu', 0, [0,1,2,3])
 )
 
@@ -24,7 +20,7 @@ train_results = model.train(
 metrics = model.val()
 
 # Perform object detection on an image
-results = model("path/to/image.jpg")  # Predict on an image
+results = model("data/test/ace of clubs/1.jpg")  # Predict on an image
 results[0].show()  # Display results
 
 # Export the model to ONNX format for deployment
