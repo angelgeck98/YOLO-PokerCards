@@ -11,7 +11,7 @@ model = YOLO("yolo11n.pt")
 # Train the model on the card dataset for 100 epochs
 train_results = model.train(
     data="card.yaml",  # Path to dataset configuration file
-    epochs=5,  # Number of training epochs
+    epochs=75,  # Number of training epochs
     imgsz=224,  # Image size for training
     device="cpu",  # Device to run on (e.g., 'cpu', 0, [0,1,2,3])
 )
