@@ -18,7 +18,7 @@ if __name__ == "__main__":
     # Train the model on the card dataset for 100 epochs
     train_results = model.train(
         data="data.yaml",  # Path to dataset configuration file
-        epochs=50,  # Number of training epochs
+        epochs=100,  # Number of training epochs
         imgsz=416,
         batch=32,  # Image size for training
         device=0  # Device to run on (e.g., 'cpu', 0, [0,1,2,3])
