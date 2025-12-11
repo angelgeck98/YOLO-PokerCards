@@ -1,5 +1,3 @@
-kagglehub
-kagglehub[pandas-datasets]
 ultralytics
 numpy>=1.23.0
 matplotlib>=3.3.0
